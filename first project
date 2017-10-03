@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int m;
+	int n;
+	int cout;
+	int i;
+	int i1;
+	int x;
+	cout = 0;
+	i = 0;
+	scanf_s("%d %d", &m, &n);
+	for (i = m; i >= m&&i <= n; i++)
+	{
+		for (i1 = 2; i1 < i; i1++)
+		{
+			x = i%i1;
+			if (x == 0) cout++; break;
+		}
+	}
+	printf("%d", (n - m) + 1 - cout);
+	getch();
+	return 0;
+}
